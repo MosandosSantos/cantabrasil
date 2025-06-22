@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canta o Brasil - Cidade das Artes</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/aos.css">
+  <link rel="stylesheet" href="./assets/css/estilo.css">
+  <script defer src="./assets/js/aos.js"></script>
+  <script defer src="./assets/js/efeitos.js"></script>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- BARRA DE INFORMAÇÃO FIXA NO TOPO -->
+  <div class="w-full bg-yellow-500 text-black text-sm font-semibold py-2 text-center z-50">
+    📅 19 de outubro | 🕓 16h | 📍 Cidade das Artes
+  </div>
+
+  <!-- HERO COM ZOOM E TEXTO ANIMADO -->
+  <section class="relative h-screen overflow-hidden">
+    <div class="absolute inset-0 transform scale-105 animate-zoomSlow bg-top bg-cover"
+      style="background-image: url('./assets/img/herocantabrasil.png');">
+    </div>
+    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+      <div class="text-center px-6" data-aos="fade-up">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-yellow-400 drop-shadow-md">Canta o Brasil</h1>
+        <p class="text-lg md:text-2xl mb-4">com o Maestro Luiz Lima</p>
+        <p class="text-xl font-light italic text-gray-100 mb-6">Você quer sentir a emoção de ouvir o Brasil cantado com vozes que tocam a alma?</p>
+        <a href="https://bileto.sympla.com.br/event/105537" target="_blank"
+          class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 mt-6 inline-block rounded-lg shadow-md transition duration-300">
+          🎟️ Comprar Ingressos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFORMAÇÕES DO EVENTO -->
+  <section class="bg-gray-800 py-12 px-6 text-center">
+    <div class="max-w-4xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">Um espetáculo emocionante de vozes</h2>
+      <p class="text-gray-300 mb-6">
+        O projeto “Canta o Brasil”, idealizado pelo Maestro Luiz Lima, traz uma noite inesquecível com corais renomados do Rio de Janeiro. Uma experiência que une emoção, cultura e música de qualidade.
+      </p>
+      <p class="mb-2"><strong>📍 Local:</strong> Cidade das Artes - Av. das Américas, 5300, Barra da Tijuca</p>
+      <p class="mb-2"><strong>💵 Ingressos:</strong> R$30 (entrada única)</p>
+      <p class="mb-2"><strong>🗓️ Data:</strong> Domingo, 19 de Outubro às 16h</p>
+    </div>
+  </section>
+<!-- CONHEÇA O MAESTRO -->
+<section class="bg-gray-700 py-16 px-6 text-center">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-8" data-aos="fade-up">Conheça o Maestro Luiz Lima</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold mb-2">Uma Vida pela Música</h3>
+        <p class="text-gray-300">
+          Com mais de 25 anos de carreira, Luiz Lima é conhecido por sua paixão em transformar vozes em verdadeiras obras de arte.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold mb-2">Maestro de Todos</h3>
+        <p class="text-gray-300">
+          Do popular ao erudito, Luiz Lima reúne coros diversos e promove inclusão através da música, unindo jovens, idosos e talentos especiais.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-semibold mb-2">Espetáculos Inesquecíveis</h3>
+        <p class="text-gray-300">
+          Responsável pelo "Canta o Brasil", Luiz Lima transforma cada apresentação em momentos únicos, emocionantes e inesquecíveis.
+        </p>
+      </div>
+
+    </div>
+
+    <a href="https://bileto.sympla.com.br/event/105537" target="_blank"
+      class="inline-block mt-8 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
+      Quero viver essa emoção
+    </a>
+  </div>
+</section>
+
+  <!-- CALL TO ACTION -->
+  <section class="bg-gray-900 py-10 text-center">
+    <h3 class="text-xl mb-4" data-aos="zoom-in">Garanta seu lugar agora mesmo!</h3>
+    <a href="https://bileto.sympla.com.br/event/105537" target="_blank"
+      class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300">
+      ➤ Ir para o Sympla
+    </a>
+    <p class="mt-4 text-sm text-gray-400">Vendas limitadas • Evento com lotação controlada</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-6 text-center text-gray-500 text-sm">
+    © 2025 Canta o Brasil – Todos os direitos reservados.
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+
+</html>
