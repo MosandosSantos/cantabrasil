@@ -11,3 +11,34 @@
 .animate-zoomSlow {
   animation: zoomSlow 10s ease-in-out infinite alternate;
 }
+
+.hero-title {
+  position: relative;
+  top: -45px; /* “sobe” o texto em 20px; ajuste para o valor que preferir */
+}
+
+/* Keyframes de slide + fade */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica a animação ao <h1> inteiro */
+.hero-title {
+  opacity: 0;               /* começa invisível */
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;    /* ajusta pra quando começar */
+}
+
+/* Se quiser escalonar por letra: */
+.hero-title span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out forwards;
+}
