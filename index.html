@@ -77,7 +77,26 @@
     }
   }
   </script>
+<style>
+    /* 1. Container que esconde o texto fora da área visível */
+    .marquee {
+      overflow: hidden;            /* esconde o texto que sai da área */
+      white-space: nowrap;         /* impede quebra de linha */
+    }
 
+    /* 2. Animação que move de 100% → -100% */
+    @keyframes marquee {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* 3. Aplica a animação aos itens de texto */
+    .marquee span {
+      display: inline-block;       /* para que padding e transform funcionem */
+      padding-left: 2rem;          /* espaço entre repetições */
+      animation: marquee 15s linear infinite;
+    }
+  </style>
   <!-- CSS e JS originais -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/aos.css">
@@ -206,26 +225,123 @@
     <h2 data-aos="fade-up" data-aos-duration="800" class="text-4xl md:text-5xl font-bold mb-4 text-[#d2bea1]">
   Nossos Patrocinadores
 </h2>
-    <div class="relative">
-      <div class="flex animate-scroll gap-8 whitespace-nowrap">
-        <!-- Logos originais -->
-        <img src="./assets/img/patriocinio1.png" alt="Patrocinador 1" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio2.png" alt="Patrocinador 2" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio3.png" alt="Patrocinador 3" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio4.png" alt="Patrocinador 4" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio5.png" alt="Patrocinador 5" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio6.png" alt="Patrocinador 6" class="h-16 object-contain flex-shrink-0" />
-        <!-- Duplica para o loop -->
-        <img src="./assets/img/patriocinio1.png" alt="Patrocinador 1" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio2.png" alt="Patrocinador 2" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio3.png" alt="Patrocinador 3" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio4.png" alt="Patrocinador 4" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio5.png" alt="Patrocinador 5" class="h-16 object-contain flex-shrink-0" />
-        <img src="./assets/img/patriocinio6.png" alt="Patrocinador 6" class="h-16 object-contain flex-shrink-0" />
+   <!-- SEÇÃO DE PATROCÍNIO – Grade 3×2 -->
+<section id="patrocinio" class="bg-[#010F1C] py-20 px-6 text-white font-sans">
+  <div class="max-w-6xl mx-auto">
+    <!-- Título -->
+    <h2
+      data-aos="fade-up"
+      data-aos-duration="800"
+      class="text-4xl md:text-5xl font-bold mb-8 text-[#d2bea1] text-center"
+    >
+      Nossos Patrocinadores
+    </h2>
+    <!-- Descrição (opcional) -->
+    <p
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="150"
+      class="text-lg md:text-xl text-gray-300 mb-12 text-center max-w-2xl mx-auto"
+    >
+      Estes são os parceiros que acreditam no nosso trabalho e tornam este evento possível.
+    </p>
+
+    <!-- Grid 3×2 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
+      <!-- Patrocinador 1 -->
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="200"
+        class="flex items-center justify-center p-4 bg-gray-800 rounded-sm shadow-md hover:shadow-sm transition"
+      >
+        <img src="assets/img/patriocinio1.png"
+             alt="Prefeitura do Rio de Janeiro"
+             class="h-24 object-contain" />
+      </div>
+
+      <!-- Patrocinador 2 -->
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="300"
+        class="flex items-center justify-center p-4 bg-gray-800 rounded-sm shadow-md hover:shadow-sm transition"
+      >
+        <img src="assets/img/patriocinio2.png"
+             alt="Canal @veronica_a_vero"
+             class="h-24 object-contain" />
+      </div>
+
+      <!-- Patrocinador 3 -->
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="400"
+        class="flex items-center justify-center p-4 bg-gray-800 rounded-sm shadow-md hover:shadow-sm transition"
+      >
+        <img src="assets/img/patriocinio3.png"
+             alt="Rosa de Fogo"
+             class="h-24 object-contain" />
+      </div>
+
+      <!-- Patrocinador 4 -->
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="500"
+        class="flex items-center justify-center p-4 bg-gray-800 rounded-sm shadow-md hover:shadow-sm transition"
+      >
+        <img src="assets/img/patriocinio4.png"
+             alt="Câmara Comunitária da Barra"
+             class="h-24 object-contain" />
+      </div>
+
+      <!-- Patrocinador 5 -->
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="600"
+        class="flex items-center justify-center p-4 bg-gray-800 rounded-sm shadow-md hover:shadow-sm transition"
+      >
+        <img src="assets/img/patriocinio5.png"
+             alt="Espaço Cultura"
+             class="h-24 object-contain" />
+      </div>
+
+      <!-- Patrocinador 6 -->
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-delay="700"
+        class="flex items-center justify-center p-4 bg-gray-800 rounded-sm shadow-md hover:shadow-sm transition"
+      >
+        <img src="assets/img/patriocinio6.png"
+             alt="Espaço Cultural"
+             class="h-24 object-contain" />
       </div>
     </div>
   </div>
 </section>
+
+</section>
+<section class="py-2">
+    <div class="marquee bg-black text-white font-bold text-lg">
+      <!-- Repita o <span> quantas vezes quiser para espaçamento -->
+      <span>Compre seu ingresso +++</span>
+      <span>Compre seu ingresso +++</span>
+      <span>Compre seu ingresso +++</span>
+      <span>Compre seu ingresso +++</span>
+        <span>Compre seu ingresso +++</span>
+      <span>Compre seu ingresso +++</span>
+      <span>Compre seu ingresso +++</span>
+      <span>Compre seu ingresso +++</span>
+ 
+    </div>
+  </section>
+  <!-- … resto do body … -->
+
+
+
   <!-- CALL TO ACTION -->
   <section class="bg-gray-900 py-10 text-center">
     <h3 class="text-xl mb-4" data-aos="zoom-in">Garanta seu lugar agora mesmo!</h3>
