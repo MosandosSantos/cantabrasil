@@ -8,14 +8,6 @@
   }
 }
 
-.animate-zoomSlow {
-  animation: zoomSlow 10s ease-in-out infinite alternate;
-}
-
-.hero-title {
-  position: relative;
-  top: -45px; /* “sobe” o texto em 20px; ajuste para o valor que preferir */
-}
 
 /* Keyframes de slide + fade */
 @keyframes fadeUp {
@@ -28,25 +20,35 @@
     transform: translateY(0);
   }
 }
-
-/* Aplica a animação ao <h1> inteiro */
-.hero-title {
-  opacity: 0;               /* começa invisível */
-  animation: fadeUp 0.8s ease-out forwards;
-  animation-delay: 0.3s;    /* ajusta pra quando começar */
-}
-
-/* Se quiser escalonar por letra: */
-.hero-title span {
-  display: inline-block;
-  opacity: 0;
-  animation: fadeUp 0.6s ease-out forwards;
-}
 /* para percorrer 100% do conteúdo */
 @keyframes scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-100%); }
 }
-.animate-scroll {
-  animation: scroll 30s linear infinite;
+.hero-title {
+  /* Sombra para melhorar contraste */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+
+  /* Animação de slide + fade */
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out 0.3s forwards;
+  will-change: transform, opacity;
+}
+
+.hero-title span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.hero-subtitle {
+  /* Sombra sutil para subtítulo */
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+
+  /* Animação de entrada ligeiramente posterior */
+  transform: translateY(10px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out 0.5s forwards;
+  will-change: transform, opacity;
 }
